@@ -98,6 +98,18 @@ impl Universe {
         self.to_string()
     }
 
+    pub fn get_width(&self) -> u32 {
+        self.width
+    }
+
+    pub fn get_height(&self) -> u32 {
+        self.height
+    }
+
+    pub fn cells(&self) -> *const Cell {
+        self.cells.as_ptr()
+    }
+
 }
 
 impl fmt::Display for Universe {
